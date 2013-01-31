@@ -3,3 +3,4 @@ venv/
 *sublime-*
 listen_later/settings.py
 .DS_Store
+*.pyc
