@@ -6,3 +6,6 @@ class Audio(models.Model):
     clip_title = models.CharField(max_length=500)
     date_time = models.DateTimeField(auto_now=True)
     listened = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.page_title

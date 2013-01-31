@@ -6,11 +6,7 @@ admin.autodiscover()
 admin.site.register(Audio)
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'listen_later.views.home', name='home'),
-    # url(r'^listen_later/', include('listen_later.foo.urls')),
-
+    url(r'^', include('audio.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
 )
