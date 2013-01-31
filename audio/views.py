@@ -12,4 +12,7 @@ def audio_input_form(request):
 	return render(request,'audio/input.html')
 
 def audio_list(request):
-	pass
+    clip_list = Audio.objects.all()
+    context = {'clip_list': clip_list}
+    return render(request, 'audio/list.html', context)
+

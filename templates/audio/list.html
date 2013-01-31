@@ -1,0 +1,9 @@
+{% extends "audio/base.html" %}
+
+{% block content %}
+{% for x in clip_list %}
+	<div class="audio_entry">
+		{{ x.page_title }}
+	</div>
+{% endfor %}
+{% endblock %}
