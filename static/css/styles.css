@@ -1,12 +1,24 @@
 #content {
-	width: 960px;
+	max-width: 960px;
+	width: 80%;
 	margin: 0px auto;
 }
 
 .audio_entry {
-	font: 600 20px 'Raleway';
+	padding: 20px 0px;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 10px;
+}
 
-	height: 60px;
+.audio_entry h3 {
+	font: 600 20px 'Raleway';
+	margin-bottom: 4px;
+}
+
+.audio_entry h4 {
+	font: 600 14px 'Raleway';
+	color: #888;
+	margin: 0px;
 }
 
 #pagetitle {

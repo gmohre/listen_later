@@ -1,9 +1,10 @@
 {% extends "audio/base.html" %}
 
 {% block content %}
-{% for x in clip_list %}
-	<div class="audio_entry">
-		{{ x.page_title }}
+{% for clip in clip_list %}
+	<div class="audio_entry" data-url="{{ clip.source_url }}">
+		<h3>{{ clip.page_title }}</h3>
+		<h4>{{ clip.clip_title }}</h3>
 	</div>
 {% endfor %}
 {% endblock %}
