@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from audio.models import Audio
 
 def add_audio(request):
-	a = Audio(source_url=request.POST['source_url'], page_title=request.POST['page_title'], clip_title="None", listened=False)
+	a = Audio(source_url=request.POST['source_url'], page_title=request.POST['page_title'], clip_title=request.POST['clip_title'], listened=False)
 	a.save()
 	return HttpResponse("Sure, that submitted.")
 
