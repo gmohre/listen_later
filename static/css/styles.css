@@ -1,5 +1,6 @@
 body {
 	font: 400 14px/14px 'Raleway', 'Proxima Nova', 'Helvetica Neue', Arial, serif;
+	margin: 0px;
 }
 
 #content {
@@ -10,9 +11,11 @@ body {
 }
 
 .audio_entry {
-	padding: 20px 0px;
+	padding: 20px 0px 30px 0px;
 	border-bottom: 1px solid #CCC;
 	margin-bottom: 10px;
+	display:block;
+	height: 70px;
 }
 
 .audio_entry h3 {
@@ -54,11 +57,24 @@ body {
 	height: 50px;
 }
 
+.audio_delete {
+	display:block;
+	float: right;
+	margin-top: 40px;
+}
+
+.audio_metadata {
+	display:block;
+	float:left;
+
+}
+
 .hdr_from {
 	color: #666;
 	margin-left: 5px;
 	font-size: 10px;
 }
+
 
 
 /* Play buttons */
@@ -89,4 +105,8 @@ body {
 	width: 50px;
 	text-align: center;
 	font-weight: 500;
+}
+
+.me-plugin {
+	height: 0px;
 }

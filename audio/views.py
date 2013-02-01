@@ -18,3 +18,5 @@ def audio_list(request):
 
 def delete_audio(request):
 	deleted_file = Audio.objects.filter(id=request.POST['id'])
+	deleted_file.delete()
+	return HttpResponse(request.POST['id'])
