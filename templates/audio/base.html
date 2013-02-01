@@ -1,6 +1,4 @@
-{% load staticfiles %}
-
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}" />
@@ -8,12 +6,18 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<title>Listen Later</title>
 		<body>
-			<div id="content">
-				<h1 id="pagetitle">Listen Later</h1>
-				{% block content %}
-				{% endblock %}
+			<div id="pagetop">
+				<div id="pagetitle">
+					<h1>Listen Later</h1>
+					<span class="hdr_from">from</span>
+					<img src="{% static "img/wnyclogo.png" %}" width="40" height="14"/>
+				</div>
 			</div>
+			{% block content %}
+			{% endblock %}
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="{% static "js/vendor/howler/howler.js" %}"></script>
+		<script src="{% static "js/vendor/mediaelement/mediaelement-and-player.js" %}"></script>
 		<script src="{% static "js/main.js" %}"></script>
 		</body>
 </html>

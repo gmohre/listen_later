@@ -1,7 +1,12 @@
+body {
+	font: 400 14px/14px 'Raleway', 'Proxima Nova', 'Helvetica Neue', Arial, serif;
+}
+
 #content {
 	max-width: 960px;
 	width: 80%;
 	margin: 0px auto;
+	background: url('/static/img/dropshadow.png') center top no-repeat;
 }
 
 .audio_entry {
@@ -12,7 +17,7 @@
 
 .audio_entry h3 {
 	font: 600 20px 'Raleway';
-	margin-bottom: 4px;
+	margin: 1em 0 0.2em 0;
 }
 
 .audio_entry h4 {
@@ -21,6 +26,67 @@
 	margin: 0px;
 }
 
+#pagetop {
+	width: 100%;
+	border-bottom: 1px solid #666;
+	background: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/kindajean.png');
+	height: 60px;
+}
+
 #pagetitle {
-	font: 900 48px 'Raleway';
+	max-width: 960px;
+	width: 80%;
+	margin: 0px auto;
+}
+
+#pagetitle h1 {
+	max-width: 960px;
+	margin: 10px auto;
+	font: 900 52px 'Raleway';
+	display: inline;
+}
+
+.play_button {
+	float: left;
+	display: block;
+	margin: 18px 10px 0px 0px;
+	width: 50px;
+	height: 50px;
+}
+
+.hdr_from {
+	color: #666;
+	margin-left: 5px;
+	font-size: 10px;
+}
+
+
+/* Play buttons */
+
+.mejs-play { 
+	background: url('/static/img/playbutton.png') no-repeat;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.mejs-play button {
+	display:none;
+}
+
+.mejs-pause { 
+	background: url('/static/img/pausebutton.png') no-repeat;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.mejs-pause button {
+	display:none;
+}
+
+.mejs-duration-container {
+	width: 50px;
+	text-align: center;
+	font-weight: 500;
 }

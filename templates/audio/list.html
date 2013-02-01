@@ -1,10 +1,17 @@
 {% extends "audio/base.html" %}
 
 {% block content %}
+<div id="content">
 {% for clip in clip_list %}
-	<div class="audio_entry" data-url="{{ clip.source_url }}">
-		<h3>{{ clip.page_title }}</h3>
-		<h4>{{ clip.clip_title }}</h3>
-	</div>
-{% endfor %}
+		<div class="audio_entry" data-url="{{ clip.source_url }}">
+			<div class="play_button {% if clip.listened %}listened{% endif %}">
+				<audio controls src="{{ clip.source_url }}" width="25" height="30"></audio>
+			</div>
+			<div class="audio_metadata">
+				<h3>{{ clip.page_title }}</h3>
+				<h4>{{ clip.clip_title }}</h3>
+			</div>
+		</div>
+	{% endfor %}
+</div>
 {% endblock %}

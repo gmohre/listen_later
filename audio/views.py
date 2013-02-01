@@ -12,7 +12,9 @@ def audio_input_form(request):
 	return render(request,'audio/input.html')
 
 def audio_list(request):
-    clip_list = Audio.objects.all()
+    clip_list = Audio.objects.all().order_by('-date_time')
     context = {'clip_list': clip_list}
     return render(request, 'audio/list.html', context)
 
+def delete_audio(request):
+	deleted_file = Audio.objects.filter(id=request.POST['id'])
